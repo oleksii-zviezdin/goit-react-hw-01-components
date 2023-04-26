@@ -1,16 +1,19 @@
-export const App = () => {
+import { UserProfileCard } from "./UserProfileCard/UserProfileCard"
+import userData from '../user.json'
+
+export const App = ( ) => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
-};
+    <>
+      <UserProfileCard
+        avatar={userData.avatar}
+        username={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        stats={userData.stats}
+        followers={userData.stats.followers}
+        views={userData.stats.views}
+        likes={userData.stats.likes}
+      />
+    </>
+  )
+}
