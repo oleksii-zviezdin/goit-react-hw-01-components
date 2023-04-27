@@ -1,4 +1,5 @@
 import { UserProfileCard } from "./UserProfileCard/UserProfileCard"
+import { Statistics } from "./Statistics/Statistic"
 import userData from '../user.json'
 
 export const App = ( ) => {
@@ -14,6 +15,7 @@ export const App = ( ) => {
         views={userData.stats.views}
         likes={userData.stats.likes}
       />
+      <Statistics/>
     </>
   )
 }
