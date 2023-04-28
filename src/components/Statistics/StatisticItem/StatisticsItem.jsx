@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-export const StatisticsItem = ( id, label, percentage) => {
+export const StatisticsItem = ({id, label, percentage}) => {
     return (
-    <li key={id} className="item">
+        <li key={id} className="item">
         <span className="label">{label}</span>
         <span className="percentage">{percentage}</span>
-    </li>
-    )
+        </li>
+    )  
 }
 
 StatisticsItem.propTypes = {
