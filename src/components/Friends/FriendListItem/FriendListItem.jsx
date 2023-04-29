@@ -2,7 +2,6 @@
 import css from "../Friends.module.css"
 
 export const FriendListItem = ({ userAvatar, userName, userOnline }) => {
-    console.log(userOnline)
     return (
         <li className={css.items}>
             <span className={`${css.status} ${css[userOnline]}`}></span>
