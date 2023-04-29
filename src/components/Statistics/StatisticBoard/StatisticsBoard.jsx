@@ -1,11 +1,11 @@
 import { StatisticsItem } from "../StatisticItem/StatisticsItem"
 import PropTypes from 'prop-types';
+import css from '../Statistics.module.css'
 
 export const StatisticsBoard = ({statisticData}) => {
     return (
-        <ul className="stat-list">
+        <ul className={css.statlist}>
             {statisticData.map(({ id, label, percentage }) => {
-                console.log(`key:`,id,`label:`, label,`repcentage:`, percentage)
                 return(
                     <StatisticsItem
                         key={id}

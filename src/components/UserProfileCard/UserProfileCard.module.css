@@ -3,18 +3,38 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    margin-left: auto;
+    margin-right: auto;
     padding: 12px;
-    width: 196px;
+
+    color: #ffffff;
+
+    width: 256px;
     border-radius: 12px;
-    background-color: #f9f9f9;
-    box-shadow: 2px 3px 8px 2px gray;
+    background-color: #4b3a61;
+    box-shadow: 0px 0px 12px 6px #654a8d;
+    transition: scale 200ms ease-in-out, box-shadow 200ms ease-in-out, background-color 200ms ease-in-out;
+}
+
+.profile:hover,
+.profile:focus {
+    scale: 1.01;
+    background-color: #503e68;
+    box-shadow: 0px 0px 16px 8px #8a65c1;
+    cursor: pointer;
 }
 
 .description {
-    composes: profile;
-    border: none;
-    box-shadow: none;
-    border-bottom: 2px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px;
+    padding-bottom: 24px;
+    
+    border-bottom: 2px solid #8a65c1;
     border-radius: 0px;
 }
 
@@ -24,25 +44,26 @@
     align-items: center;
     gap: 20px;
 
-    padding-top: 12px;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .avatar {
     width: 50%;
     border-radius: 50%;
     margin-bottom: 12px;
-    border: 4px solid rgba(128, 128, 128, 0.508);
+    border: 4px solid #8a65c1;
     background-color: #ffffff;
 }
 
 .name {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 24px;
 }
 
 .tag {
-    margin-bottom: 12px;
+    margin-bottom: 24px;
     font-size: 16px;
     color: rgb(154,165,176,1);
 }
@@ -64,5 +85,5 @@
     text-align: center;
     margin-top: 6px;
     font-weight: bold;
-    color: rgb(154, 165, 176, 1);
+    color: #fff;
 }
