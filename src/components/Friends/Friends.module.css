@@ -13,7 +13,7 @@
     padding-right: 24px;
     gap: 12px;
     align-items: center;
-    justify-content:start;
+    justify-content: flex-start;
 
     color: #ffffff ;
     text-transform: uppercase;
