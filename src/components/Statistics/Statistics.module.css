@@ -36,6 +36,8 @@
     border-bottom-right-radius: 12px;
     overflow: hidden;
     outline: 2px solid #8a65c1;
+
+    cursor: pointer;
 }
 
 .item {
