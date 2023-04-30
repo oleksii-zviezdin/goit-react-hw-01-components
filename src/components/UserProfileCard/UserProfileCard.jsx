@@ -1,5 +1,5 @@
-import css from './UserProfileCard.module.css'
-import PropTypes from 'prop-types';
+import css from "./UserProfileCard.module.css"
+import PropTypes from "prop-types";
 
 export const UserProfileCard = ({ avatar, username, tag, location, stats}) => {
     return (
