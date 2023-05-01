@@ -11,7 +11,7 @@ export const UserProfileCard = ({ avatar, username, tag, location, stats}) => {
                     className={css.avatar}
                 />
                 <p className={css.name}>{username}</p>
-                <p className={css.tag}>{tag}</p>
+                <p className={css.tag}>@{tag}</p>
                 <p className={css.location}>{location}</p>
             </div>
 
@@ -37,7 +37,7 @@ UserProfileCard.propTypes = {
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    stats: PropTypes.exact({
+    stats: PropTypes.shape({
             followers: PropTypes.number.isRequired,
             views: PropTypes.number.isRequired,
             likes: PropTypes.number.isRequired,

@@ -1,15 +1,16 @@
 import { UserProfileCard } from "./UserProfileCard/UserProfileCard"
 import { Statistics } from "./Statistics/Statistic"
-import { FriendList } from "./Friends/FriendList/FriendList"
+import { FriendList } from "./Friends/FriendList"
 import { TransactionHistory } from "./TransactionHistory/TransactionHistory"
 
-import userData from "../user.json"
-import friends from "../friends.json"
-import transactions from "../transactions.json"
+import userData from "../data/user.json"
+import statsData from "../data/data.json"
+import friendsData from "../data/friends.json"
+import transactionsData from "../data/transactions.json"
 
 export const App = ( ) => {
   return (
-    <main>
+    <>
       <section className="userProfile">
         <div className="userProfile__leftSection">
           <UserProfileCard
@@ -18,17 +19,14 @@ export const App = ( ) => {
           tag={userData.tag}
           location={userData.location}
           stats={userData.stats}
-          followers={userData.stats.followers}
-          views={userData.stats.views}
-          likes={userData.stats.likes}
           />
-          <Statistics title="Upload stats" />
+          <Statistics stats={statsData} title="Upload stats" />
         </div>
-        <FriendList friendsData={friends} />
+        <FriendList friends={friendsData} />
       </section>
       <section className="transactionSection">
-        <TransactionHistory transactions={transactions} />
+        <TransactionHistory transactions={transactionsData} />
       </section>
-    </main>
+    </>
   )
 }
